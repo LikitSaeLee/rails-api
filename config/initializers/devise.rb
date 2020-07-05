@@ -318,5 +318,7 @@ Devise.setup do |config|
       ['DELETE', %r{^/logout$}]
     ]
     jwt.expiration_time = 5.minutes.to_i
+
+    jwt.aud_header = 'JWT_AUD'
   end
 end
