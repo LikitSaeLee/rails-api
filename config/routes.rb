@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  post '/graphql', to: 'graphql#execute'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   devise_for :users,
              path: '',
@@ -13,6 +14,4 @@ Rails.application.routes.draw do
                sessions: 'sessions',
                registrations: 'registrations'
              }
-
-  get 'current_user', to: 'users#show'
 end
