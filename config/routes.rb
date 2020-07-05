@@ -13,4 +13,6 @@ Rails.application.routes.draw do
                sessions: 'sessions',
                registrations: 'registrations'
              }
+
+  get 'current_user', to: 'users#show'
 end
